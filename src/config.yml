@@ -1,0 +1,14 @@
+---
+service:
+    dataset: 'registro-de-femicidios-2017-08-29.csv'
+    filepath: "/home/nuxion/Proyects/feminicidios/datasets/"
+    scheme: 'scheme.yml'
+logger:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level: 'DEBUG'
+    path: 'justicia.log'
+elastic:
+    hostname: 'localhost'
+    port: 9200
+    user: ''
+    pass: ''
