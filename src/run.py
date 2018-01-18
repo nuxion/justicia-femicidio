@@ -26,9 +26,8 @@ def main():
     # Load csv, return a <list[]>
     # c/elemento de la lista es un dict{}
     list_csv = opencsv(conf.CSV_FILE, headers)
-    import pdb;pdb.set_trace()
     for c in list_csv:
-        dbE.insertDict(c, 'femicidio', 'dataset')
+        dbE.insertDict(c, '2femicidio', 'dataset')
 if __name__ == '__main__':
     main()
 

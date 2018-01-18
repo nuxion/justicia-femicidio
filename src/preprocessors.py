@@ -42,17 +42,16 @@ def _mapper_values(datos, headers):
     return: <<dict>>
     """
     dicto = {}
-    for i in range(0, len(headers)):
-
-        # Loopea la lista para separar nombre de
-        # funcion de casteo
-        import pdb;pdb.set_trace()
-        for name_key, _castFunc in headers.items():
-            try:
-                caster = getattr(casting, _castFunc)
-                dicto[name_key] = caster(datos[i])
-            except AttributeError:
-                pass
+    # Loopea la lista para separar nombre de
+    # funcion de casteo
+    i = 0
+    for name_key, _castFunc in headers.items():
+        try:
+            caster = getattr(casting, _castFunc)
+            dicto[name_key] = caster(datos[i])
+        except AttributeError:
+            pass
+        i = i + 1
 
     return dicto
 
