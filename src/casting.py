@@ -7,10 +7,13 @@ ONLY_NUMS = re.compile('[0-9]*').search
 
 
 def _return_ddmmY(s_dat):
+    '''
+    recibe un string
+    '''
     try:
         return datetime.strptime(s_dat,'%d/%m/%Y')
     except ValueError:
-        return "Invalid date"
+        return "Invalid"
 
 def _return_datetime(s_dat, s_format):
     """
@@ -63,3 +66,8 @@ def _is_bool(s_data):
 
 def _return_str(s_data):
     return str(s_data)
+
+def _return_lower_str(s_data):
+    low = str(s_data)
+    return low.lower()
+

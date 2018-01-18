@@ -2,11 +2,12 @@
 headers:
     - numero: '_return_int'
     - edad: '_return_int'
-    - identidad_genero: '_return_str'
-    - tipo_victima: '_return_str'
-    - lugar_hecho: '_return_str'
-    - modalidad_comisiva: '_return_str'
+    - identidad_genero: '_return_lower_str'
+    - tipo_victima: '_return_lower_str'
+    - lugar_hecho: '_return_lower_str'
+    - modalidad_comisiva: '_return_lower_str'
       #- fecha_hecho: '_return_ddmmY'
-    - fecha_hecho: '_return_str'
-scheme_id: numero, fecha_hecho
+    - fecha_hecho: '_return_ddmmY'
+
+scheme_id: numero, edad, fecha_hecho
 

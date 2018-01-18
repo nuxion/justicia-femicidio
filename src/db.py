@@ -28,7 +28,7 @@ class DBElastic(object):
                 id=e[_id],
                 body=e
             )
-    def insertDict(self, document, index, d_type):
+    def insertDict(self, document, index, d_type, _id):
         """
         Inserta solo un elemento a la vez, en este caso
         un diccionario.
@@ -46,4 +46,5 @@ class DBElastic(object):
 
         self.client.index(index=index,
                           doc_type=d_type,
+                          id = _id,
                           body = document)

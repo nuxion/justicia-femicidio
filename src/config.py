@@ -25,6 +25,7 @@ class Config(object):
         # Config ElasticSearch backend
         self.ES_HOST = self.configObject['elastic']['hostname']
         self.ES_PORT = self.configObject['elastic']['port']
+        self.ES_INDEX = self.configObject['elastic']['index']
         self.ES_USER = self.configObject['elastic']['user']
         self.ES_PASS = self.configObject['elastic']['pass']
         # Config scheme

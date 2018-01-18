@@ -1,7 +1,7 @@
 ---
 service:
-    dataset: 'registro-de-femicidios-2018-01-12.csv'
-    filepath: "/home/nuxion/Proyects/femicidios/datasets/"
+    dataset: 'newfile3.txt'
+    filepath: "/home/nuxion/Proyects/femicidio/datasets/"
     scheme: 'scheme.yml'
 logger:
     format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -10,5 +10,6 @@ logger:
 elastic:
     hostname: 'localhost'
     port: 9200
+    index: 't_f1'
     user: ''
     pass: ''
